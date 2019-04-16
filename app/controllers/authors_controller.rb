@@ -1,4 +1,5 @@
 class AuthorsController < ApplicationController
+  skip_before_action :verify_authenticity_token
   before_action :set_author, only: [:show, :edit, :update, :destroy]
 
   # GET /authors
